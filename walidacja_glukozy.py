@@ -42,3 +42,5 @@ elif wartosc <= gorny_limit:
     wynik = 'w normie'
 else:
     wynik = 'powyżej normy'
+
+print(f'Wynik: {wynik}')
