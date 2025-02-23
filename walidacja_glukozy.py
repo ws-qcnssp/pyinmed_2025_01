@@ -21,6 +21,7 @@ elif wartosc > 0:
     jednostka = 'mmol/L'
 else:
     print('Wartość nie może być ujemna')
+    jednostka = 'N/A'
     # exit()
 
 print(jednostka)
