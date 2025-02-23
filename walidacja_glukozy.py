@@ -1,0 +1,1 @@
+# Walidacja stężenia glukozy we krwi 
