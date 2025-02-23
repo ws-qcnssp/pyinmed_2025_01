@@ -14,6 +14,7 @@ wartosc = input('Wprowadź stężenie glukozy we krwi: ')
 # print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
 
 wartosc = float(wartosc)
+print(f'Wprowadzona wartość stężenia: {wartosc}')
 
 if wartosc > 40:
     jednostka = 'mg/dL'
@@ -21,7 +22,7 @@ elif wartosc > 0:
     jednostka = 'mmol/L'
 else:
     print('Wartość nie może być ujemna')
-    jednostka = 'N/A'
-    # exit()
+    # jednostka = 'N/A'
+    exit()
 
-print(jednostka)
+print(f'Znaleziona jednostka: {jednostka}')
