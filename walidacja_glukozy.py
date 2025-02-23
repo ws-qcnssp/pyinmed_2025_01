@@ -35,3 +35,10 @@ else:
     gorny_limit = 5.6
 
 print(f'Limity: {dolny_limit} do {gorny_limit}')
+
+if wartosc < dolny_limit:
+    wynik = 'poniżej normy'
+elif wartosc <= gorny_limit:
+    wynik = 'w normie'
+else:
+    wynik = 'powyżej normy'
