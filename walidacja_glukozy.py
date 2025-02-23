@@ -26,3 +26,11 @@ else:
     exit()
 
 print(f'Znaleziona jednostka: {jednostka}')
+
+if jednostka == 'mg/dL':
+    dolny_limit = 70
+    gorny_limit = 100
+else:
+    dolny_limit = 3.9
+    gorny_limit = 5.6
+
