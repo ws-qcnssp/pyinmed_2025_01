@@ -6,3 +6,9 @@
 # 2. zweryfikować poziom i go wypisać razem z jednostką i wartością
 
 wartosc = input('Wprowadź stężenie glukozy we krwi: ')
+jednostka = 'mmol/l'
+
+print('Wpisana wartość:', wartosc, 'jednostka:', jednostka)
+print('Wpisana wartość: ' + wartosc + ', jednostka: ' + jednostka)
+print('Wpisana wartość: {}, jednostka: {}'.format(wartosc, jednostka))
+print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
