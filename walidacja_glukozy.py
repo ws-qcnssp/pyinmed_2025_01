@@ -13,8 +13,8 @@ wartosc = input('Wprowadź stężenie glukozy we krwi: ')
 # print('Wpisana wartość: {}, jednostka: {}'.format(wartosc, jednostka))
 # print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
 
-wartosc = float(wartosc)
-print(f'Wprowadzona wartość stężenia: {wartosc}')
+wartosc = float(wartosc) # kowersja na liczbę
+print('Wprowadzona wartość stężenia: {wartosc}')
 
 if wartosc > 40:
     jednostka = 'mg/dL'
