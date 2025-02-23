@@ -177,4 +177,44 @@ Traceback (most recent call last):
 NameError: name 'true' is not defined. Did you mean: 'True'?
 >>> True
 True
->>>   
+>>>  fgfgth = 3
+  File "<stdin>", line 1
+    fgfgth = 3
+IndentationError: unexpected indent
+>>> zmienna = 5
+>>> zmienna == 2    
+False
+>>> warunek = zmienna > 2
+>>> warunek
+True
+>>> if zmienna > 2:
+... print(zmienna)
+  File "<stdin>", line 2
+    print(zmienna)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 1
+>>> if zmienna > 2: 
+...     print(zmienna)
+...
+5
+>>> if zmienna > 2:
+...     if zmienna < 5:
+...             print(zmienna)
+...
+>>>
+>>> if zmienna > 2:
+...     if zmienna < 5:
+...             print(zmienna)
+...     else:
+...             print('wieksze od 2 i mniejsze od 5')
+...
+wieksze od 2 i mniejsze od 5
+>>> if zmienna > 2:
+...     if zmienna < 5:
+...             print(zmienna)
+...     else:
+...             print('wieksze od 2 i mniejsze od 5')
+...     print('to tez do wypisania')
+...
+wieksze od 2 i mniejsze od 5
+to tez do wypisania
