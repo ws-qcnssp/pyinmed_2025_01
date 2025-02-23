@@ -14,7 +14,7 @@ wartosc = input('Wprowadź stężenie glukozy we krwi: ')
 # print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
 
 wartosc = float(wartosc)
-wartosc = 50
+
 if wartosc > 40:
     jednostka = 'mg/dL'
 elif wartosc > 0:
