@@ -34,3 +34,4 @@ else:
     dolny_limit = 3.9
     gorny_limit = 5.6
 
+print(f'Limity: {dolny_limit} do {gorny_limit}')
