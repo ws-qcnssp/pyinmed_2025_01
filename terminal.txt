@@ -1,0 +1,180 @@
+PS D:\dev\pyinmed_2025_01> python
+Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> liczba = 57
+>>> liczba
+57
+>>> l = 1.1 + 2.2
+>>> l
+3.3000000000000003
+>>> 4ythgh = 2
+  File "<stdin>", line 1
+    4ythgh = 2
+    ^
+SyntaxError: invalid decimal literal
+>>> dngfdfdg5436 = 4
+>>> tekst = 'test'           
+>>> tekst2 = "test" 
+>>> tekst
+'test'
+>>> tekst2
+'test'
+>>> tekst2 = 'don't do that"
+  File "<stdin>", line 1
+    tekst2 = 'don't do that"
+                  ^
+SyntaxError: invalid syntax
+>>> tekst2 = "don't do that" 
+>>> tekst2 = '"don\'t do that"' 
+>>> tekst2
+'"don\'t do that"'
+>>> print(tekst2)
+"don't do that"
+>>> tekst2 = '"don\'t\ndo that"'
+>>> print(tekst2)
+"don't
+do that"
+>>> sukces = True
+>>> sukces
+True
+>>> id(tekst2)
+2834955891248
+>>> id(tekst2)
+2834955891248
+>>> id(tekst2)
+2834955891248
+>>> id(tekst2)
+2834955891248
+>>> id(tekst2)
+2834955891248
+>>> tekst2 = 'nic' 
+>>> id(tekst2)     
+2834954603248
+>>> lista = [3, True, 3.1, 'text']
+>>> lista
+[3, True, 3.1, 'text']
+>>> id(lista)
+2834956025088
+>>> lista.append('s')
+>>> lista
+[3, True, 3.1, 'text', 's']
+>>> id(lista)
+2834956025088
+>>> lista2 = lista
+>>> lista2
+[3, True, 3.1, 'text', 's']
+>>> lista2.append(1)
+>>> lista2
+[3, True, 3.1, 'text', 's', 1]
+>>> lista
+[3, True, 3.1, 'text', 's', 1]
+>>> lista.append(3)
+>>> lista2  
+[3, True, 3.1, 'text', 's', 1, 3]
+>>> tekst1 = 'abc' 
+>>> tekst2 = tekst1
+>>> tekst2
+'abc'
+>>> tekst2 = 'def' 
+>>> tekst2
+'def'
+>>> tekst1          
+'abc'
+>>> lista2 = lista.copy()
+>>> lista2
+[3, True, 3.1, 'text', 's', 1, 3]
+>>> lista
+[3, True, 3.1, 'text', 's', 1, 3]
+>>> lista2.append(3)
+>>> lista2
+[3, True, 3.1, 'text', 's', 1, 3, 3]
+>>> lista  
+[3, True, 3.1, 'text', 's', 1, 3]
+>>> lista[2] 
+3.1
+>>> lista[0] 
+3
+>>> lista[-1] 
+3
+>>> lista[-1] = 5
+>>> lista[-1]     
+5
+>>> lista
+[3, True, 3.1, 'text', 's', 1, 5]
+>>> lista[-2] 
+1
+>>> lista[7]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> lista[0:3] 
+[3, True, 3.1]
+>>> lista[3:-1] 
+['text', 's', 1]
+>>> lista[3:]   
+['text', 's', 1, 5]
+>>> lista[:3] 
+[3, True, 3.1]
+>>> lista[:5]  
+[3, True, 3.1, 'text', 's']
+>>> lista[5:] 
+[1, 5]
+>>> lista[:]
+[3, True, 3.1, 'text', 's', 1, 5]
+>>> lista = lista + [4,8,9]
+>>> lista
+[3, True, 3.1, 'text', 's', 1, 5, 4, 8, 9]
+>>> lista.append([1,2])
+>>> lista
+[3, True, 3.1, 'text', 's', 1, 5, 4, 8, 9, [1, 2]]
+>>> lista[-1]
+[1, 2]
+>>> lista.append(list)
+>>> lista
+[3, True, 3.1, 'text', 's', 1, 5, 4, 8, 9, [1, 2], <class 'list'>]
+>>> lista = [3, True, 3.1, 'text', 's', 1, 5, 4, 8, 9, [1, 2]]
+>>> lista
+[3, True, 3.1, 'text', 's', 1, 5, 4, 8, 9, [1, 2]]
+>>> lista[::2] 
+[3, 3.1, 's', 5, 8, [1, 2]]
+>>> param = {'tetno': 78, 'temp': 37.2, 'imie': 'Jan'} 
+>>> inny = {}
+>>> inny
+{}
+>>> type(inny)
+<class 'dict'>
+>>> param['imie']
+'Jan'
+>>> param[imie]   
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'imie' is not defined
+>>> param[True] = 'costam'
+>>> param
+{'tetno': 78, 'temp': 37.2, 'imie': 'Jan', True: 'costam'}
+>>> param[True] 
+'costam'
+>>> param.keys()
+dict_keys(['tetno', 'temp', 'imie', True])
+>>> param.values() 
+dict_values([78, 37.2, 'Jan', 'costam'])
+>>> type(param.keys()) 
+<class 'dict_keys'>
+>>> list(param.keys())                               
+['tetno', 'temp', 'imie', True]
+>>> krotka = (5, 'text', True) 
+>>> krotka[1]
+'text'
+>>> krotka[:] 
+(5, 'text', True)
+>>> krotka.append(False)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'append'
+>>> true
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined. Did you mean: 'True'?
+>>> True
+True
+>>>   
