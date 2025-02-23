@@ -6,9 +6,21 @@
 # 2. zweryfikować poziom i go wypisać razem z jednostką i wartością
 
 wartosc = input('Wprowadź stężenie glukozy we krwi: ')
-jednostka = 'mmol/l'
+# jednostka = 'mmol/l'
 
-print('Wpisana wartość:', wartosc, 'jednostka:', jednostka)
-print('Wpisana wartość: ' + wartosc + ', jednostka: ' + jednostka)
-print('Wpisana wartość: {}, jednostka: {}'.format(wartosc, jednostka))
-print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
+# print('Wpisana wartość:', wartosc, 'jednostka:', jednostka)
+# print('Wpisana wartość: ' + wartosc + ', jednostka: ' + jednostka)
+# print('Wpisana wartość: {}, jednostka: {}'.format(wartosc, jednostka))
+# print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
+
+wartosc = float(wartosc)
+wartosc = 50
+if wartosc > 40:
+    jednostka = 'mg/dL'
+elif wartosc > 0:
+    jednostka = 'mmol/L'
+else:
+    print('Wartość nie może być ujemna')
+    # exit()
+
+print(jednostka)
