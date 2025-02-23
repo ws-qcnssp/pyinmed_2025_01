@@ -14,7 +14,5 @@ if sys.version_info[:3] == (3,11,9) and os.path.join(os.getcwd(), '.venv').lower
 else:
     print(f'Używasz wersji pythona {sys.version_info[:3]}, z lokalizacji {sys.executable}. Sprawdź to :)')
 
-lis = []
-
 
 
