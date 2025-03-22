@@ -6,11 +6,12 @@ class Car:
     def start_engine(self):
         print("Engine started")
 
-my_car = Car("Toyota", "Corolla")
-my_car.start_engine()
+if __name__ == '__main__':
+    my_car = Car("Toyota", "Corolla")
+    my_car.start_engine()
 
-# Przypisanie nowego atrybutu
-my_car.speed = 60
-print('Speed:', my_car.speed)
+    # Przypisanie nowego atrybutu
+    my_car.speed = 60
+    print('Speed:', my_car.speed)
 
-# my_car.drive()
+    # my_car.drive()
