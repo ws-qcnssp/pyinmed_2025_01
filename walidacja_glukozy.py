@@ -18,7 +18,7 @@ try:
     print(f'Wprowadzona wartość stężenia: {wartosc}')
 except ValueError:
     print('Wprowadzona wartość nie jest liczbą!')
-    exit
+    exit()
 
 if wartosc > 40:
     jednostka = 'mg/dL'
