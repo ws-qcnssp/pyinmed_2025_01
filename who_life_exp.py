@@ -1,4 +1,5 @@
-with open('life_expectancy.csv', 'r') as plik:
-    linijki = plik.readlines()
-    kolumny = linijki[0].split(',')
-    print(kolumny[:3])
+import pandas as pd
+
+df = pd.read_csv('life_expectancy.csv')
+print(df)
+
