@@ -13,8 +13,12 @@ wartosc = input('Wprowadź stężenie glukozy we krwi: ')
 # print('Wpisana wartość: {}, jednostka: {}'.format(wartosc, jednostka))
 # print(f'Wpisana wartość: {wartosc}, jednostka: {jednostka}')
 
-wartosc = round(float(wartosc),2) # kowersja na liczbę
-print(f'Wprowadzona wartość stężenia: {wartosc}')
+try:
+    wartosc = round(float(wartosc),2) # kowersja na liczbę
+    print(f'Wprowadzona wartość stężenia: {wartosc}')
+except ValueError:
+    print('Wprowadzona wartość nie jest liczbą!')
+    exit
 
 if wartosc > 40:
     jednostka = 'mg/dL'
