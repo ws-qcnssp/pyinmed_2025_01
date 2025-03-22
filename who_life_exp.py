@@ -20,7 +20,7 @@ b_k, a_k = polyfit(dane_k['YEAR'], dane_k['Numeric'], 1)
 print(f'Dopasowana funkcja dla mężczyzn: f(x) = {a_m} * x + {b_m}')
 print(f'Dopasowana funkcja dla kobiet: f(x) = {a_k} * x + {b_k}')
 
-m_2030 = a_m*2030 + b_m
+m_2030 = a_m * 2030 + b_m
 print(f"Oczekiwana długość życia mężczyzn w 2030: {m_2030}")
 
 plt.scatter(dane_m['YEAR'], dane_m['Numeric'], label='Mężczyźni')
