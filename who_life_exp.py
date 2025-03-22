@@ -32,6 +32,9 @@ plt.title('Długość życia wg WHO - Globalne')
 plt.xlabel('Rok')
 plt.ylabel('Długość życia (lata)')
 
-
+wielomian_m = Polynomial([c_m, b_m, a_m])
+pochodna_m = wielomian_m.deriv()
+ekstremum_m = pochodna_m.roots()
+print(f"ekstremum dla mężczyzn: {ekstremum_m}")
 
 plt.show()
