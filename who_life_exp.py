@@ -9,8 +9,8 @@ dane = df[['YEAR','REGION','SEX','Numeric']]
 dane = dane[dane['REGION'] == 'GLOBAL']
 print(dane)
 
-dane_m = dane.query('SEX = "MLE"')
-dane_k = dane.query('SEX = "FMLE"')
+dane_m = dane.query('SEX == "MLE"')
+dane_k = dane.query('SEX == "FMLE"')
 
 plt.scatter(dane_m['YEAR'], dane_m['Numeric'])
 plt.show()
