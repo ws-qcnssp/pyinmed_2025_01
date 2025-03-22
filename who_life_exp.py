@@ -32,4 +32,6 @@ plt.title('Długość życia wg WHO - Globalne')
 plt.xlabel('Rok')
 plt.ylabel('Długość życia (lata)')
 
+
+
 plt.show()
