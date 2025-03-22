@@ -14,4 +14,5 @@ dane_k = dane.query('SEX == "FMLE"')
 
 plt.scatter(dane_m['YEAR'], dane_m['Numeric'], label='Mężczyźni')
 plt.scatter(dane_k['YEAR'], dane_k['Numeric'], label='Kobiety')
+
 plt.show()
