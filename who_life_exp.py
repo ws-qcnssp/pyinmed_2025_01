@@ -11,8 +11,8 @@ dane = dane.query('REGION == "GLOBAL"')
 # dane = dane[dane['REGION'] == 'GLOBAL']
 print(dane)
 
-dane_m = dane.query('SEX == "MLE"')
-dane_k = dane.query('SEX == "FMLE"')
+dane_m = dane.query('SEX == "MLE"').sort_values('YEAR')
+dane_k = dane.query('SEX == "FMLE"').sort_values('YEAR')
 
 c_m, b_m, a_m = polyfit(dane_m['YEAR'], dane_m['Numeric'], 2)
 c_k, b_k, a_k = polyfit(dane_k['YEAR'], dane_k['Numeric'], 2)
