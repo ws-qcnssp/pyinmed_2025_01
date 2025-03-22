@@ -18,9 +18,11 @@ b_m, a_m = polyfit(dane_m['YEAR'], dane_m['Numeric'], 1)
 b_k, a_k = polyfit(dane_k['YEAR'], dane_k['Numeric'], 1)
 
 print(f'Dopasowana funkcja dla mężczyzn: f(x) = {a_m} * x + {b_m}')
+print(f'Dopasowana funkcja dla kobiet: f(x) = {a_k} * x + {b_k}')
 
 plt.scatter(dane_m['YEAR'], dane_m['Numeric'], label='Mężczyźni')
 plt.scatter(dane_k['YEAR'], dane_k['Numeric'], label='Kobiety')
+plt.plot(dane_m['YEAR'], a_m * dane_m['YEAR'] + b_m)
 plt.legend()
 plt.title('Długość życia wg WHO - Globalne')
 plt.xlabel('Rok')
