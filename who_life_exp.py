@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('life_expectancy.csv')
 dane = df[['YEAR','REGION','SEX','Numeric']]
@@ -7,4 +8,6 @@ dane = df[['YEAR','REGION','SEX','Numeric']]
 # dane = dane.query('REGION == "GLOBAL"')
 dane = dane[dane['REGION'] == 'GLOBAL']
 print(dane)
+
+
 
