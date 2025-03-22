@@ -14,8 +14,8 @@ print(dane)
 dane_m = dane.query('SEX == "MLE"')
 dane_k = dane.query('SEX == "FMLE"')
 
-b_m, a_m = polyfit(dane_m['YEAR'], dane_m['Numeric'], 2)
-b_k, a_k = polyfit(dane_k['YEAR'], dane_k['Numeric'], 2)
+b_m, a_m = polyfit(dane_m['YEAR'], dane_m['Numeric'], 1)
+b_k, a_k = polyfit(dane_k['YEAR'], dane_k['Numeric'], 1)
 
 print(f'Dopasowana funkcja dla mężczyzn: f(x) = {a_m} * x + {b_m}')
 print(f'Dopasowana funkcja dla kobiet: f(x) = {a_k} * x + {b_k}')
