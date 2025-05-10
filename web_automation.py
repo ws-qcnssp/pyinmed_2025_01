@@ -67,8 +67,9 @@ def main():
     with sync_playwright() as pw:
         browser, context = start_pw(pw)
         page = context.new_page()
-        test_logowania(page)
-        test_pobierania(page)
+        # test_logowania(page)
+        # test_pobierania(page)
+        test_pobierania_wielu(page)
         stop_pw(browser, context)
 
 
