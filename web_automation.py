@@ -47,6 +47,18 @@ def test_pobierania(page: Page):
     else:
         print('test pobierania - ERROR')
 
+
+
+def test_pobierania_wielu(page: Page):
+    nazwa_pliku = 'test_{}.txt'
+    page.goto(URL + 'download')
+    linki = page.locator('a[href*=txt]')
+    for link in linki.all():
+        with page.expect_download() as download_info:
+            link.click()
+            plik = download_info.value
+            plik.save_as(nazwa_pliku)
+
 def main():
     with sync_playwright() as pw:
         browser, context = start_pw(pw)
