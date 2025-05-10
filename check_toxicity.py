@@ -19,7 +19,7 @@ def main():
         eg.msgbox('No chemical provided!')
         return
     with sync_playwright() as pw:
-        browser, context = start_pw(pw)
+        browser, context = start_pw(pw, ignore_errors=True)
         page = context.new_page()
 
         stop_pw(browser, context)
