@@ -9,7 +9,13 @@ import re
 
 URL = 'http://the-internet.herokuapp.com/'
 
-def start_pw(pw: Playwright, headless=False):
+def start_pw(pw: Playwright, headless=False, ingore_errors = False):
+    if ingore_errors:
+        context = pw.chromium.launch_persistent_context(
+            user_data_dir='',
+            headless=headless,
+            ingore_https_errors = ingore_errors
+        )
     browser = pw.chromium.launch(
         headless=headless,
         slow_mo=1000
