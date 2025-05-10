@@ -14,7 +14,7 @@ def start_pw(pw: Playwright, headless=False, ignore_errors = False):
         context = pw.chromium.launch_persistent_context(
             user_data_dir='',
             headless=headless,
-            ingore_https_errors = ignore_errors
+            ignore_https_errors = ignore_errors
         )
         browser = None
     browser = pw.chromium.launch(
