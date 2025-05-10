@@ -5,7 +5,8 @@ URL = 'http://the-internet.herokuapp.com/'
 
 def start_pw(pw: Playwright, headless=False):
     browser = pw.chromium.launch(
-        headless=headless
+        headless=headless,
+        slow_mo=1000
     )
     context = browser.new_context()
     return browser, context
