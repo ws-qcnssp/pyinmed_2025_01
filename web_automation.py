@@ -11,8 +11,8 @@ def start_pw(pw: Playwright, headless=False):
     return browser, context
 
 def stop_pw(browser: Browser, context: BrowserContext):
-    # context.stop()
-    browser.stop()
+    context.close()
+    browser.close()
 
 def test_logowania(page: Page):
     page.goto(URL)
