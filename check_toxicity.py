@@ -6,7 +6,7 @@ import easygui as eg
 
 
 def main():
-    chemical = input('Please provide chemical name or CAS number')
+    chemical = eg.enterbox('Please provide chemical name or CAS number')
     with sync_playwright() as pw:
         browser, context = start_pw(pw)
         page = context.new_page()
