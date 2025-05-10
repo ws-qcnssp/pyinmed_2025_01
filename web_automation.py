@@ -52,6 +52,7 @@ def main():
         browser, context = start_pw(pw)
         page = context.new_page()
         test_logowania(page)
+        test_pobierania(page)
         stop_pw(browser, context)
 
 
