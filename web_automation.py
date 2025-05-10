@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page, Playwright, Browser, BrowserContext
+import os
 
 # pw = sync_playwright().start()
 # browser = pw.chromium.launch(headless=False)
@@ -34,11 +35,18 @@ def test_logowania(page: Page):
 
 
 def test_pobierania(page: Page):
+    nazwa_pliku = 'test.txt'
+    if os.path.exists(nazwa_pliku):
+        os.remove(nazwa_pliku)
     page.goto(URL + 'download')
     with page.expect_download() as download_info:
         page.locator('a[href*=txt]').first.click()
         plik = download_info.value
-        plik.save_as('test.txt')
+        plik.save_as(nazwa_pliku)
+    if os.path.exists(nazwa_pliku):
+        print('test pobierania - OK')
+    else:
+        print('test pobierania - ERROR')
     
 
 def main():
