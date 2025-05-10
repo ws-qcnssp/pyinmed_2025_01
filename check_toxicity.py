@@ -9,3 +9,6 @@ def main():
         page = context.new_page()
 
         stop_pw(browser, context)
+
+if __name__ == '__main__':
+    main()
