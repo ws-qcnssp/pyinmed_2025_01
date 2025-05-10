@@ -31,3 +31,5 @@ def main():
     with sync_playwright() as pw:
         browser, context = start_pw(pw)
         page = context.new_page()
+        test_logowania(page)
+        stop_pw(browser, context)
