@@ -33,7 +33,6 @@ def test_logowania(page: Page):
     if 'You logged out of the secure area!' in info_el.inner_text():
         print('logout test - OK')
 
-
 def test_pobierania(page: Page):
     nazwa_pliku = 'test.txt'
     if os.path.exists(nazwa_pliku):
@@ -47,7 +46,6 @@ def test_pobierania(page: Page):
         print('test pobierania - OK')
     else:
         print('test pobierania - ERROR')
-    
 
 def main():
     with sync_playwright() as pw:
