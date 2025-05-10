@@ -49,7 +49,6 @@ def test_pobierania(page: Page):
         print('test pobierania - ERROR')
 
 
-
 def test_pobierania_wielu(page: Page):
     nazwa_pliku = 'test_{}.txt'
     page.goto(URL + 'download')
