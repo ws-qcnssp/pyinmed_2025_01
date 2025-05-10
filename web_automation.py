@@ -28,6 +28,9 @@ def test_logowania(page: Page):
     if 'You logged out of the secure area!' in info_el.inner_text():
         print('logout test - OK')
 
+
+def test_pobierania(page: Page):
+
 def main():
     with sync_playwright() as pw:
         browser, context = start_pw(pw)
