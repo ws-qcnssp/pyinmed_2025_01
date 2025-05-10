@@ -36,7 +36,10 @@ def test_logowania(page: Page):
 def test_pobierania(page: Page):
     page.goto(URL + 'download')
     with page.expect_download() as download_info:
-        page.locator('a[href*=txt]').nth()
+        page.locator('a[href*=txt]').first.click()
+        plik = download_info.value
+        plik.save_as('test.txt')
+    
 
 def main():
     with sync_playwright() as pw:
