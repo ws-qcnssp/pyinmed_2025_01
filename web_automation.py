@@ -1,6 +1,10 @@
 from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page, Playwright, Browser, BrowserContext
 
+# pw = sync_playwright().start()
+# browser = pw.chromium.launch(headless=False)
+# page = browser.new_page()
+
 URL = 'http://the-internet.herokuapp.com/'
 
 def start_pw(pw: Playwright, headless=False):
@@ -30,6 +34,9 @@ def test_logowania(page: Page):
 
 
 def test_pobierania(page: Page):
+    page.goto(URL + 'download')
+    with page.expect_download() as download_info:
+        page.locator('a[href*=txt]').nth()
 
 def main():
     with sync_playwright() as pw:
