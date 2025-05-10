@@ -60,7 +60,7 @@ def test_pobierania_wielu(page: Page):
             link.click()
             plik = download_info.value
             plik.save_as(nazwa_pliku.format(index))
-    pobrane_cnt = [nazwa for nazwa in os.listdir() if re.match(r'', nazwa)]
+    pobrane_cnt = [nazwa for nazwa in os.listdir() if re.match(r'test_[0-9]+.txt', nazwa)]
 
 def main():
     with sync_playwright() as pw:
