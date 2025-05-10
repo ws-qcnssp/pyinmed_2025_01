@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page, Playwright, Browser, BrowserContext
 import os
+import re
 
 # pw = sync_playwright().start()
 # browser = pw.chromium.launch(headless=False)
@@ -53,11 +54,13 @@ def test_pobierania_wielu(page: Page):
     nazwa_pliku = 'test_{}.txt'
     page.goto(URL + 'download')
     linki = page.locator('a[href*=txt]')
-    for link in linki.all():
+    cnt = linki.count()
+    for index, link in enumerate(linki.all()):
         with page.expect_download() as download_info:
             link.click()
             plik = download_info.value
-            plik.save_as(nazwa_pliku)
+            plik.save_as(nazwa_pliku.format(index))
+    pobrane_cnt = [nazwa for nazwa in os.listdir() if re.match(r'', nazwa)]
 
 def main():
     with sync_playwright() as pw:
