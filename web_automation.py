@@ -34,5 +34,6 @@ def main():
         test_logowania(page)
         stop_pw(browser, context)
 
+
 if __name__ == '__main__':
     main()
