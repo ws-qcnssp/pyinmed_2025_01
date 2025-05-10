@@ -21,7 +21,7 @@ def main():
     with sync_playwright() as pw:
         browser, context = start_pw(pw, ignore_errors=True)
         page = context.new_page()
-
+        check_chemical(page, chemical)
         stop_pw(browser, context)
 
 if __name__ == '__main__':
