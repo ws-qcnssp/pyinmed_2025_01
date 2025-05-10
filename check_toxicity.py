@@ -4,6 +4,7 @@ from web_automation import start_pw, stop_pw
 
 import easygui as eg
 
+T3DB_URL = 'https://www.t3db.ca/'
 
 def main():
     chemical = eg.enterbox('Please provide chemical name or CAS number')
