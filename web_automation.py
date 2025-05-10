@@ -1,6 +1,8 @@
 from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page, Playwright, Browser, BrowserContext
 
+URL = 'http://the-internet.herokuapp.com/'
+
 def start_pw(pw: Playwright, headless=False):
     browser = pw.chromium.launch(
         headless=headless
@@ -12,9 +14,18 @@ def stop_pw(browser: Browser, context: BrowserContext):
     context.stop()
     browser.stop()
 
-def test_logowania
-
-
+def test_logowania(page: Page):
+    page.goto(URL)
+    page.locator('a[href*=login]').click()
+    page.locator('input[id=username]').fill('tomsmith')
+    page.locator('input[id=password]').fill('SuperSecretPassword!')
+    page.locator('button[type=submit]').click()
+    info_el = page.locator('div[id=flash]')
+    if 'You logged into a secure area!' in info_el.inner_text():
+        print('login test - OK')
+    page.locator('a[href*=logout]').click()
+    if 'You logged out of the secure area!' in info_el.inner_text():
+        print('logout test - OK')
 
 def main():
     with sync_playwright() as pw:
