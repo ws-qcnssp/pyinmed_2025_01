@@ -17,11 +17,12 @@ def start_pw(pw: Playwright, headless=False, ignore_errors = False):
             ignore_https_errors = ignore_errors
         )
         browser = None
-    browser = pw.chromium.launch(
-        headless=headless,
-        slow_mo=1000
-    )
-    context = browser.new_context()
+    else:
+        browser = pw.chromium.launch(
+            headless=headless,
+            slow_mo=1000
+        )
+        context = browser.new_context()
     return browser, context
 
 def stop_pw(browser: Browser, context: BrowserContext):
